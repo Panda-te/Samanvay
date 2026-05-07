@@ -15,10 +15,10 @@ COPY fabric-audit/pom.xml       fabric-audit/pom.xml
 COPY fabric-api/pom.xml         fabric-api/pom.xml
 
 # Download dependencies (cached layer)
-RUN ./mvnw dependency:go-offline -B -q
+RUN mvn dependency:go-offline -B -q
 
 COPY . .
-RUN ./mvnw clean package -DskipTests -B -q
+RUN mvn clean package -DskipTests -B -q
 
 # ── Stage 2: Runtime ──────────────────────────────────────────
 FROM eclipse-temurin:21-jre-alpine AS runtime
