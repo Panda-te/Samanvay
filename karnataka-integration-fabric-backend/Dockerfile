@@ -34,7 +34,8 @@ USER fabric
 EXPOSE 8080
 
 ENTRYPOINT ["java", \
-  "-XX:+UseZGC", \
+  "-XX:+UseSerialGC", \
+  "-Xss512k", \
   "-XX:MaxRAMPercentage=75.0", \
   "-Djava.security.egd=file:/dev/./urandom", \
   "-jar", "app.jar"]
