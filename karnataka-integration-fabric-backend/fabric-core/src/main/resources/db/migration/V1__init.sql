@@ -24,14 +24,14 @@ CREATE INDEX event_ledger_status_idx
 
 
 -- ── Idempotency Fingerprints ─────────────────────────────────
-CREATE TABLE idempotency_fingerprints (
-    fingerprint         TEXT            PRIMARY KEY,
-    event_id            UUID,
-    target_dept_id      TEXT,
-    status              TEXT,
-    locked_at           TIMESTAMPTZ,
-    committed_at        TIMESTAMPTZ
-);
+-- CREATE TABLE idempotency_fingerprints (
+--     fingerprint         TEXT            PRIMARY KEY,
+--     event_id            UUID,
+--     target_dept_id      TEXT,
+--     status              TEXT,
+--     locked_at           TIMESTAMPTZ,
+--     committed_at        TIMESTAMPTZ
+-- );
 
 
 -- ── Audit Records ────────────────────────────────────────────
