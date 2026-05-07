@@ -1,15 +1,15 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   application:
     name: karnataka-integration-fabric
 
+spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/fabric_db
-    username: fabric
-    password: fabric
-    driver-class-name: org.postgresql.Driver
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
 
   jpa:
     hibernate:
